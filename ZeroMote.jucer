@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="WpOquK" name="ZeroMote" displaySplashScreen="1" reportAppUsage="1"
+              splashScreenColour="Dark" projectType="guiapp" version="1.0.0"
+              bundleIdentifier="com.yourcompany.ZeroMote" includeBinaryInAppConfig="1"
+              cppLanguageStandard="11" jucerVersion="5.1.1">
+  <MAINGROUP id="W30pQj" name="ZeroMote">
+    <GROUP id="{97E181C7-68D5-2650-A5EF-91BA487A8C3C}" name="Source">
+      <FILE id="CFSakz" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="C3Pm0E" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="pzWen3" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="VO82ck" name="ZeroVideoOverlay.cpp" compile="1" resource="0"
+            file="Source/ZeroVideoOverlay.cpp"/>
+      <FILE id="fS8NMb" name="ZeroVideoOverlay.h" compile="0" resource="0"
+            file="Source/ZeroVideoOverlay.h"/>
+      <FILE id="ZbnMFJ" name="ZeroMain.cpp" compile="1" resource="0" file="Source/ZeroMain.cpp"/>
+      <FILE id="HJLK9i" name="ZeroMain.h" compile="0" resource="0" file="Source/ZeroMain.h"/>
+      <FILE id="mWATWo" name="VLCWrapper.cpp" compile="1" resource="0" file="Source/VLCWrapper.cpp"/>
+      <FILE id="oaYAJr" name="VLCWrapper.h" compile="0" resource="0" file="Source/VLCWrapper.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <VS2017 targetFolder="Builds/VisualStudio2017" externalLibraries="libvlc.x64.lib&#10;libvlccore.x64.lib">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug_x64" winWarningLevel="2" generateManifest="1" winArchitecture="x64"
+                       isDebug="1" optimisation="1" targetName="ZeroMote" headerPath="../../libvlc/include&#10;../../libvlc/include/vlc/plugins"
+                       libraryPath="../../libvlc/lib/msvc"/>
+        <CONFIGURATION name="Release_x64" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       isDebug="0" optimisation="3" targetName="ZeroMote" headerPath="../../libvlc/include&#10;../../libvlc/include/vlc/plugins"
+                       libraryPath="../../libvlc/lib/msvc"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../ctrlr/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2017>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="ZeroMote"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="ZeroMote"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../ctrlr/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../ctrlr/JUCE/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS/>
+</JUCERPROJECT>
