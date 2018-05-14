@@ -58,6 +58,17 @@ ZeroVideoOverlay::ZeroVideoOverlay ()
 
 
     //[Constructor] You can add your own custom stuff here..
+
+	ENetAddress address;
+	ENetEvent event;
+	ENetPeer *peer;
+	ENetHost *client;
+
+	if (enet_initialize () != 0)
+	{
+		fprintf (stderr, "An error occurred while initializing ENet.\n");
+	}
+
     //[/Constructor]
 }
 

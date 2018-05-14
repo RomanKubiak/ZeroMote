@@ -7,10 +7,9 @@
 */
 
 #pragma once
-
-#include "../JuceLibraryCode/JuceHeader.h"
-#include "ZeroMain.h"
 #include "ZeroVideoOverlay.h"
+#include "ZeroMain.h"
+
 
 //==============================================================================
 /*

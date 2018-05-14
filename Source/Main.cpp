@@ -8,9 +8,10 @@
   ==============================================================================
 */
 
-#include "../JuceLibraryCode/JuceHeader.h"
-#include "MainComponent.h"
 #include "ZeroVideoOverlay.h"
+#include "MainComponent.h"
+
+
 
 //==============================================================================
 class vlctestApplication  : public JUCEApplication
@@ -27,7 +28,19 @@ public:
     void initialise (const String& commandLine) override
     {
         // This method is where you should put your application's initialisation code..
+		File settingsFile = File::getSpecialLocation(File::userApplicationDataDirectory).getChildFile(ProjectInfo::projectName).getChildFile("settings.json");
+		if (!settingsFile.existsAsFile())
+		{
+			if (settingsFile.create().wasOk())
+			{
+				if (!settingsFile.replaceWithText(String(BinaryData::default_json, BinaryData::default_jsonSize)))
+				{
+					Logger::writeToLog("ERROR: can't write default settings to: " + settingsFile.getFullPathName());
+				}
+			}
+		}
 
+		var settings = JSON::parse(settingsFile);
         mainWindow = new MainWindow (getApplicationName());
     }
 

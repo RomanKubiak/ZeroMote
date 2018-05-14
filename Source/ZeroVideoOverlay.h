@@ -20,6 +20,7 @@
 #pragma once
 
 //[Headers]     -- You can add your own extra header files here --
+#include <enet/enet.h>
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "VLCWrapper.h"
 //[/Headers]
